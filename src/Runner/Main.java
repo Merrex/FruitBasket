@@ -8,7 +8,7 @@ import Objects.FruitBowl;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
+        //System.out.println("Hello world!");
         Object Apple = new Fruit("Apple", "Red", 2);
         Object Orange=new Fruit("Orange", "Saffron", 3);
 
