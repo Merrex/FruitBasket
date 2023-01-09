@@ -1,59 +1,36 @@
 package Objects;
 
 import java.util.ArrayList;
+import java.util.TooManyListenersException;
 
-public class ShelfBowl implements Bowl {
+public class ShelfBowl {
 
     public ArrayList<Fruit> ShelfFruitList;
-    public static int TotalShelf=0;
-    public static int ShelfSize;
+
     public int ShelfNumber;
     public String sortBy;//color, type, size
+    public String color;
 
-    public ShelfBowl(int shelfNumber){
-        this.ShelfNumber=shelfNumber;
-        TotalShelf++;
-    }
-
-    public ShelfBowl() {
-        ShelfFruitList=new ArrayList<Fruit>();
-
-        new ShelfBowl(TotalShelf);
-    }
+    //public static int ShelfSize;
+    public static ArrayList<ShelfBowl> SHELFLIST= new ArrayList<ShelfBowl>();
 
 
-    @Override
-    public void add(Object fruit) {
+    public ShelfBowl(){
+        System.out.println("ShelfBowl constructor");
+        updateShelfList(this);
 
     }
-
-    @Override
-    public void add(ArrayList<Object> objectList) {
-
+    public void updateShelfList(ShelfBowl shelf){
+        SHELFLIST.add(shelf);
     }
 
-    @Override
-    public void remove(Object object) {
-
-    }
-
-    @Override
-    public void removeAll() {
-
-    }
-
-    @Override
-    public void transferAllContent(Bowl fromBowl, Bowl toBowl) {
-
-    }
-
-    @Override
-    public void transferContent(Bowl fromBowl, Bowl toBowl, Object object) {
-
-    }
-
-    @Override
-    public void transferContent(Bowl fromBowl, Bowl toBowl, ArrayList<Object> objectList) {
-
+    public static void displayShelfList(){
+        System.out.println("Shelf Lists \n");
+        SHELFLIST.stream().forEach(shelf -> System.out.println("Shelf Number: "+shelf.ShelfNumber+"\n"
+                +"Sort By: "+shelf.sortBy+"\n"
+                +"Shelf Color: "+shelf.color+"\n"
+                +"Total Fruits: "+shelf.ShelfFruitList));
+        System.out.println();
     }
 }
+

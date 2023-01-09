@@ -11,18 +11,25 @@ public class Main {
         //System.out.println("Hello world!");
         Object Apple = new Fruit("Apple", "Red", 2);
         Object Orange=new Fruit("Orange", "Saffron", 3);
-
+        Object Grapes=new Fruit("Grapes", "Red", 1);
+        Object Mango=new Fruit("Mango", "Yellow", 2);
+        Fruit.displayFruitList();
         FruitBowl MyFruitBowl = new FruitBowl();
-        BasketStand MyBasketStand = new BasketStand(7, 5, "colorb ");
-
-        MyFruitBowl.add(Apple);
-        MyFruitBowl.add(Orange);
+//
+//
+       MyFruitBowl.add(Apple);
+        MyFruitBowl.add(Grapes);
+      MyFruitBowl.add(Orange);
+      MyFruitBowl.add(Mango);
         MyFruitBowl.showFruitBowlContent();
-
-        //MyBasketStand.add(Apple);
-
-        MyFruitBowl.transferAllContent(MyFruitBowl, MyBasketStand);
+//
+        BasketStand MyBasketStand = new BasketStand("color");
+        MyBasketStand.displayBasketShelfDetails();
+//        //MyBasketStand.add(Apple);
+//
+       MyFruitBowl.transferSortAllContent(MyBasketStand);
         MyBasketStand.showBasketStandContent();
-        MyFruitBowl.showFruitBowlContent();
+        MyBasketStand.displayBasketShelfDetails();
+//        MyFruitBowl.showFruitBowlContent();
     }
 }
