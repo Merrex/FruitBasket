@@ -10,13 +10,15 @@ public class ShelfBowl {
 
     private String color;
     private String size;
-    private static ArrayList<ShelfBowl> shelfBowlList = new ArrayList<ShelfBowl>();
+    private static ArrayList<ShelfBowl> shelfBowlList;
 
 
     public ShelfBowl() {
+        shelfBowlList=new ArrayList<>();
     }
 
     public ShelfBowl(int a) {
+
         System.out.println("ShelfBowl constructor");
         updateShelfList(this);
 

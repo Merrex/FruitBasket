@@ -21,7 +21,7 @@ public class Main {
         MyFruitBowl.add(Orange);
         MyFruitBowl.add(Mango);
         MyFruitBowl.showFruitBowlContent();
-        BasketStand MyBasketStand = new BasketStand("color");
+        BasketStand MyBasketStand = new BasketStand("color"); // "color" or "size"
         MyBasketStand.displayBasketShelfDetails();
 
 

@@ -18,6 +18,7 @@ public class BasketStand extends ShelfBowl implements Bowl {
         setSortBy(sortBy);
         //ShelfSize=shelfSize;//ShelfBowl Class
         if (sortBy.equalsIgnoreCase("color")) {
+            //(FruitBowl.getHashColor().size()>10)?
             setTotalShelf(FruitBowl.getHashColor().size());
         } else if (sortBy.equalsIgnoreCase(("size"))) {
             setTotalShelf(FruitBowl.getHashSize().size());
